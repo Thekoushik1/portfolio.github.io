@@ -77,17 +77,10 @@
       <div class="st-social-group wow fadeInLeft">
         <div class="st-social-link">
           <a href="https://github.com/Thekoushik1" class="st-social-btn active">
-            <span class="st-social-icon"><i class="fab fa-dribbble"></i></span>
+            <span class="st-social-icon"><i class="fab fa-github"></i></span>
             <span class="st-icon-name">GitHub</span>
           </a>
-          <a href="#" class="st-social-btn">
-            <span class="st-social-icon"><i class="fab fa-behance"></i></span>
-            <span class="st-icon-name">Behance</span>
-          </a>
-          <a href="https://twitter.com/thekoushik3" class="st-social-btn">
-            <span class="st-social-icon"><i class="fab fa-twitter"></i></span>
-            <span class="st-icon-name">Twitter</span>
-          </a>
+ 
           <a href="https://www.linkedin.com/in/sai-koushik-6b9492247/" class="st-social-btn">
             <span class="st-social-icon"><i class="fab fa-linkedin"></i></span>
             <span class="st-icon-name">LinkedIn</span>
@@ -699,6 +692,33 @@
   <script src="assets/js/ripples.min.js"></script>
   <script src="assets/js/particles.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get form data
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var subject = document.getElementById('subject').value;
+      var message = document.getElementById('msg').value;
+
+      // Compose email body
+      var emailBody = 'Name: ' + name + '\n';
+      emailBody += 'Email: ' + email + '\n';
+      emailBody += 'Subject: ' + subject + '\n';
+      emailBody += 'Message: ' + message;
+
+      // Send email
+      var mailtoLink = 'mailto:thekoushik2003@gmail.com' +
+        '?subject=' + encodeURIComponent('New Contact Form Submission') +
+        '&body=' + encodeURIComponent(emailBody);
+
+      window.location.href = mailtoLink;
+
+      // Optionally, you can display a success message or perform other actions after the email is sent
+      alert('Thank you for your message. We will be in touch shortly.');
+    });
+  </script>
 </body>
 
 </html>
