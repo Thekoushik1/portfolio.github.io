@@ -598,7 +598,7 @@
         <div class="col-lg-6">
           <h3 class="st-contact-title">Just say Hello</h3>
           <div id="st-alert"></div>
-          <form action="#" method="POST" class="st-contact-form" id="contact-form">
+          <form action="https://formsubmit.co/yourthekoushik2003@gmail.com" method="POST" class="st-contact-form" id="contact-form">
             <div class="st-form-field">
               <input type="text" id="name" name="name" placeholder="Your Name" required>
             </div>
@@ -684,33 +684,7 @@
   <script src="assets/js/ripples.min.js"></script>
   <script src="assets/js/particles.min.js"></script>
   <script src="assets/js/main.js"></script>
-  <script>
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent form submission
 
-      // Get form data
-      var name = document.getElementById('name').value;
-      var email = document.getElementById('email').value;
-      var subject = document.getElementById('subject').value;
-      var message = document.getElementById('msg').value;
-
-      // Compose email body
-      var emailBody = 'Name: ' + name + '\n';
-      emailBody += 'Email: ' + email + '\n';
-      emailBody += 'Subject: ' + subject + '\n';
-      emailBody += 'Message: ' + message;
-
-      // Send email
-      var mailtoLink = 'mailto:thekoushik2003@gmail.com' +
-        '?subject=' + encodeURIComponent('New Contact Form Submission') +
-        '&body=' + encodeURIComponent(emailBody);
-
-      window.location.href = mailtoLink;
-
-      // Optionally, you can display a success message or perform other actions after the email is sent
-      alert('Thank you for your message. We will be in touch shortly.');
-    });
-  </script>
 </body>
 
 </html>
